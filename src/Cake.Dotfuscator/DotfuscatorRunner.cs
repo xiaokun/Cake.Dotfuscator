@@ -82,7 +82,7 @@ namespace Cake.Dotfuscator
             string inStrs = "/in:";
             foreach (var assembly in assemblies)
             {
-                inStrs += assembly;
+                inStrs += assembly + ",";
             }
             inStrs = inStrs.TrimEnd(',');
             builder.Append(inStrs);
@@ -107,6 +107,10 @@ namespace Cake.Dotfuscator
         /// <returns>The name of the tool.</returns>
         protected override string GetToolName()
         {
+            string a = "";
+            int b;
+            bool success = int.TryParse(a, out b );
+             
             return "dotfuscator";
         }
 
