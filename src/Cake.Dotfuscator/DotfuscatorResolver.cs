@@ -20,7 +20,6 @@ namespace Cake.Dotfuscator
         /// </summary>
         /// <param name="fileSystem">The filesystem.</param>
         /// <param name="environment">The environment.</param>
-        /// <param name="registry">The registry.</param>
         public DotfuscatorResolver(IFileSystem fileSystem, ICakeEnvironment environment)
         {
             _fileSystem = fileSystem;

@@ -20,13 +20,13 @@ namespace Cake.Dotfuscator
         private readonly ICakeLog _logger;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Cake.StrongNameTool.DotfuscatorRunner"/> class.
+        /// Initializes a new instance of the <see cref="Cake.Dotfuscator.DotfuscatorRunner"/> class.
         /// </summary>
         /// <param name="filesystem">The filesystem.</param>
         /// <param name="enviroment">The enviroment.</param>
         /// <param name="processrunner">The processrunner.</param>
         /// <param name="tools">The tool resolver.</param>
-        /// <param name="registry">The registry.</param>
+        ///  <param name="logger">The tool logger.</param>
         public DotfuscatorRunner(IFileSystem filesystem, ICakeEnvironment enviroment, IProcessRunner processrunner, IToolLocator tools, ICakeLog logger)
             : this(filesystem, enviroment, processrunner, tools, logger, null)
         {
