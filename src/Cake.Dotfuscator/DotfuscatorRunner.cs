@@ -82,7 +82,7 @@ namespace Cake.Dotfuscator
             string inStrs = "/in:";
             foreach (var assembly in assemblies)
             {
-                inStrs += assembly + ",";
+                inStrs +="\"" + assembly + "\",";
             }
             inStrs = inStrs.TrimEnd(',');
             builder.Append(inStrs);
