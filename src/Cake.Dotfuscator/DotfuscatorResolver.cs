@@ -75,6 +75,9 @@ namespace Cake.Dotfuscator
             var programFilesPath = _environment.GetSpecialPath(SpecialPath.ProgramFilesX86);
             _ildasmPath = programFilesPath.Combine(@"Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6 Tools").CombineWithFilePath("ildasm.exe");
             if (_fileSystem.Exist(_ildasmPath)) return _ildasmPath;
+
+            _ildasmPath = programFilesPath.Combine(@"Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools").CombineWithFilePath("ildasm.exe");
+            if (_fileSystem.Exist(_ildasmPath)) return _ildasmPath;
             else throw new CakeException("Failed to find ildasm.exe.");
         }
     }
